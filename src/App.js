@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Wsp_user from './components/whatsapp_up';
+import MenuOpciones from './components/header';
+import Check_progress from './components/check_progress'
+import DelayingAppearance from './components/loading'
+import Result_text from './components/results'
+
+import { Grid } from '@material-ui/core';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <MenuOpciones />
+    <Grid>
+        <Check_progress />
+        <Wsp_user />
+        <DelayingAppearance />
+        <Result_text />
+    </Grid>
+
     </div>
   );
 }
-
 export default App;
